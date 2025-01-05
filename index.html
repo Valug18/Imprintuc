@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imprintuc - Servicios 3D</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -42,6 +43,25 @@
         header p {
             font-size: 1.3rem;
             font-weight: 300;
+        }
+
+        nav {
+            background: #00509e;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
         }
 
         .container {
@@ -87,6 +107,12 @@
             color: #555;
         }
 
+        .service i {
+            font-size: 2rem;
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+
         footer {
             background: #002a5c;
             color: white;
@@ -129,6 +155,36 @@
             background: #002a5c;
             transform: scale(1.05);
         }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: #00509e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #002a5c;
+        }
     </style>
 </head>
 <body>
@@ -138,19 +194,28 @@
         <p>Transformamos tus ideas en realidad con impresión 3D</p>
     </header>
 
-    <div class="container">
+    <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#nosotros">Nosotros</a>
+    </nav>
+
+    <div class="container" id="servicios">
         <section>
             <h2>Nuestros Servicios</h2>
             <div class="services">
                 <div class="service">
+                    <i class="fas fa-pencil-ruler"></i>
                     <h3>Diseño 3D Personalizado</h3>
                     <p>Creación de modelos 3D adaptados a tus necesidades y especificaciones.</p>
                 </div>
                 <div class="service">
+                    <i class="fas fa-print"></i>
                     <h3>Impresión 3D</h3>
                     <p>Producción de piezas de alta calidad utilizando tecnología avanzada de impresión 3D.</p>
                 </div>
                 <div class="service">
+                    <i class="fas fa-tools"></i>
                     <h3>Asesoramiento Técnico</h3>
                     <p>Te ayudamos a llevar a cabo tus proyectos con soluciones innovadoras y prácticas.</p>
                 </div>
@@ -158,14 +223,27 @@
         </section>
 
         <div class="cta">
-            <a href="#">Contáctanos</a>
+            <a href="#contacto">Contáctanos</a>
         </div>
+    </div>
+
+    <div class="container" id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 
     <footer>
         <p>&copy; 2025 Imprintuc. Todos los derechos reservados. <a href="#">Contáctanos</a></p>
+        <div>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
     </footer>
 </body>
 </html>
-
-
