@@ -225,6 +225,75 @@
                 padding: 8px 16px;
             }
         }
+
+        .contact {
+            background-color: #e9f1f8;
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            color: #00509e;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact button {
+            background-color: #00509e;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #003366;
+        }
+
+        #nosotros {
+            background-color: #f4f4f9;
+            padding: 50px 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        #nosotros h2 {
+            font-size: 2.5rem;
+            color: #00509e;
+            margin-bottom: 20px;
+        }
+
+        #nosotros p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
     </style>
 </head>
 <body>
@@ -271,6 +340,22 @@
         <h2>Impresión 3D FDM</h2>
         <p>La impresión por deposición fundida (FDM) es una tecnología de impresión 3D que utiliza un material termoplástico fundido para crear capas sucesivas de un objeto. Es ideal para piezas con detalles precisos y alta resistencia mecánica.</p>
         <img src="path-to-your-image/tecnologia.jpg" alt="Imagen de proceso de FDM" class="technology-img">
+    </div>
+
+    <div id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>En Imprintuc somos apasionados por la tecnología y la creación. Nos especializamos en ofrecer soluciones personalizadas de impresión 3D y asesoría para convertir ideas en productos funcionales. Nuestro compromiso con la calidad y la innovación nos convierte en tu mejor socio para proyectos de impresión 3D.</p>
+    </div>
+
+    <div id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna consulta? ¡Estamos para ayudarte!</p>
+        <form>
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <textarea placeholder="Escribe tu mensaje" rows="4" required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
     </div>
 
     <footer>
