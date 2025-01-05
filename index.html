@@ -23,18 +23,25 @@
             margin: 0;
         }
 
+        /* Estilo para el header fijo */
         header {
             background: linear-gradient(135deg, #002a5c, #00509e);
             color: white;
             padding: 20px 10px;
             text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: top 0.3s;
         }
 
         header img {
             width: 150px;
             margin-bottom: 15px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
@@ -48,10 +55,14 @@
             font-weight: 300;
         }
 
+        /* Menú de navegación fijo */
         nav {
             background: #00509e;
             padding: 10px 0;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 99;
         }
 
         nav a {
@@ -69,7 +80,7 @@
 
         .container {
             max-width: 1100px;
-            margin: 40px auto;
+            margin: 120px auto 40px;
             padding: 0 20px;
             text-align: center;
         }
@@ -102,7 +113,7 @@
         }
 
         .service:hover {
-            transform: translateY(-10px);
+            transform: scale(1.05); /* Efecto de zoom al hacer hover */
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
         }
 
@@ -275,6 +286,18 @@
                 font-size: 1rem;
                 padding: 8px 16px;
             }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            .services {
+                grid-template-columns: 1fr; /* Una sola columna en móviles */
+            }
         }
     </style>
 </head>
@@ -283,6 +306,7 @@
         <img src="imprintuc.jpg" alt="Logo de Imprintuc, empresa de impresión 3D">
         <h1>Imprintuc</h1>
         <p>Transformamos tus ideas en realidad con impresión 3D</p>
+        <a href="#contacto" class="cta">Solicita tu consulta gratuita</a>
     </header>
 
     <nav>
@@ -320,9 +344,7 @@
 
     <div class="container" id="nosotros">
         <h2>Nosotros</h2>
-        <p>¡Hola y bienvenidos! Somos Gabriel y Verónica, hermanos y emprendedores apasionados por la innovación. Todo comenzó con la compra de una impresora 3D para proyectos personales en casa, pero pronto nos dimos cuenta del enorme potencial que tenía. Así nació Imprintuc: un emprendimiento que crece con cada idea y desafío que asumimos.
-
-Hoy, nos hemos lanzado a compartir nuestra pasión por la tecnología 3D y te invitamos a ser parte de este viaje. Juntos, podemos llevar tus proyectos a un nuevo nivel. ¡Acompáñanos y descubramos juntos lo que podemos crear!</p>
+        <p>¡Hola y bienvenidos! Somos Gabriel y Verónica, hermanos y emprendedores apasionados por la innovación. Todo comenzó con la compra de una impresora 3D para proyectos personales en casa, pero pronto nos dimos cuenta del enorme potencial que tenía. Así nació Imprintuc un emprendimiento que crece con cada idea y desafío que asumimos.</p>
         <div class="team-members">
             <div class="team-member">
                 <img src="gabriel.jpeg" alt="Foto de Gabriel, responsable técnico de Imprintuc">
