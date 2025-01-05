@@ -27,20 +27,21 @@
         header {
             background: linear-gradient(135deg, #002a5c, #00509e);
             color: white;
-            padding: 40px 20px;
-            text-align: center;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         header img {
             width: 150px;
-            margin-bottom: 15px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
             font-size: 3rem;
-            margin: 10px 0;
+            margin: 0;
             font-weight: bold;
         }
 
@@ -257,6 +258,26 @@
             font-weight: bold;
             margin-top: 20px;
         }
+
+        .team-member img {
+            width: 200px; /* Tamaño uniforme */
+            height: 200px; /* Tamaño uniforme */
+            border-radius: 50%; /* Bordes redondeados */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+            object-fit: cover; /* Recorta las imágenes para que se ajusten correctamente */
+            transition: transform 0.3s ease; /* Efecto de escala */
+        }
+
+        .team-member img:hover {
+            transform: scale(1.05); /* Efecto de hover */
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -304,9 +325,7 @@
 
     <div class="container" id="nosotros">
         <h2>Nosotros</h2>
-        <p>¡Hola y bienvenidos! Somos Gabriel y Verónica, hermanos y emprendedores apasionados por la innovación. Todo comenzó con la compra de una impresora 3D para proyectos personales en casa, pero pronto nos dimos cuenta del enorme potencial que tenía. Así nació Imprintuc: un emprendimiento que crece con cada idea y desafío que asumimos.
-
-Hoy, nos hemos lanzado a compartir nuestra pasión por la tecnología 3D y te invitamos a ser parte de este viaje. Juntos, podemos llevar tus proyectos a un nuevo nivel. ¡Acompáñanos y descubramos juntos lo que podemos crear!</p>
+        <p>¡Hola y bienvenidos! Somos Gabriel y Verónica, hermanos y emprendedores apasionados por la innovación. Todo comenzó con la compra de una impresora 3D para proyectos personales en casa, pero pronto nos dimos cuenta del enorme potencial que tenía. Así nació Imprintuc: un emprendimiento que crece con cada idea y desafío que asumimos.</p>
         <div class="team-members">
             <div class="team-member">
                 <img src="gabriel.jpeg" alt="Foto de Gabriel, responsable técnico de Imprintuc">
@@ -336,7 +355,7 @@ Hoy, nos hemos lanzado a compartir nuestra pasión por la tecnología 3D y te in
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
+        </div>
     </footer>
 </body>
 </html>
