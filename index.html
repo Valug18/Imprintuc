@@ -21,31 +21,25 @@
             color: #333;
             line-height: 1.6;
             margin: 0;
+            scroll-behavior: smooth; /* Habilitar desplazamiento suave */
         }
 
-        /* Estilo para el header fijo */
         header {
             background: linear-gradient(135deg, #002a5c, #00509e);
             color: white;
-            padding: 20px 10px;
+            padding: 40px 20px;
             text-align: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: top 0.3s;
         }
 
         header img {
             width: 150px;
             margin-bottom: 15px;
             border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin: 10px 0;
             font-weight: bold;
         }
@@ -55,14 +49,12 @@
             font-weight: 300;
         }
 
-        /* Menú de navegación fijo */
         nav {
             background: #00509e;
-            padding: 10px 0;
-            text-align: center;
+            padding: 15px 0;
             position: sticky;
             top: 0;
-            z-index: 99;
+            text-align: center;
         }
 
         nav a {
@@ -79,22 +71,23 @@
         }
 
         .container {
-            max-width: 1100px;
-            margin: 120px auto 40px;
-            padding: 0 20px;
-            text-align: center;
+            width: 90%;
+            margin: 0 auto;
+            padding: 50px 0;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #002a5c;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
+            justify-items: center;
         }
 
         .service {
@@ -105,6 +98,8 @@
             transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s ease;
             opacity: 0;
             transform: translateY(20px);
+            width: 100%;
+            max-width: 350px;
         }
 
         .service.visible {
@@ -113,7 +108,7 @@
         }
 
         .service:hover {
-            transform: scale(1.05); /* Efecto de zoom al hacer hover */
+            transform: translateY(-10px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
         }
 
@@ -126,6 +121,7 @@
         .service p {
             font-size: 1rem;
             color: #555;
+            margin-bottom: 15px;
         }
 
         .service i {
@@ -134,11 +130,58 @@
             margin-bottom: 10px;
         }
 
+        .service-img {
+            width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-img:hover {
+            transform: scale(1.05);
+        }
+
+        #tecnologia {
+            background-color: #f0f5f9;
+            padding: 50px 20px;
+            margin-top: 60px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        #tecnologia h2 {
+            font-size: 2.5rem;
+            color: #00509e;
+            margin-bottom: 20px;
+        }
+
+        #tecnologia p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .technology-img {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .technology-img:hover {
+            transform: scale(1.05);
+        }
+
         footer {
             background: #002a5c;
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 20px;
             margin-top: 40px;
         }
 
@@ -157,12 +200,12 @@
         }
 
         footer .social-icons {
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         footer .social-icons a {
             color: white;
-            margin: 0 10px;
+            margin: 0 15px;
             font-size: 1.5rem;
             transition: color 0.3s;
         }
@@ -172,112 +215,7 @@
             transform: rotate(10deg);
         }
 
-        .cta {
-            margin-top: 30px;
-        }
-
-        .cta a {
-            display: inline-block;
-            background: #00509e;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s, transform 0.3s;
-        }
-
-        .cta a:hover {
-            background: #002a5c;
-            transform: scale(1.1);
-        }
-
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 30px auto;
-        }
-
-        form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        form input, form textarea, form button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        form button {
-            background: #00509e;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        form button:hover {
-            background: #002a5c;
-        }
-
-        #nosotros {
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        #nosotros h2 {
-            font-size: 2.5rem;
-            color: #002a5c;
-            margin-bottom: 20px;
-        }
-
-        .team-members {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 30px;
-        }
-
-        .team-member {
-            text-align: center;
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #00509e;
-        }
-
-        .team-member h3 {
-            margin-top: 10px;
-            font-size: 1.5rem;
-            color: #00509e;
-        }
-
-        .team-member p {
-            font-size: 1rem;
-            color: #555;
-            margin-top: 10px;
-        }
-
         @media (max-width: 768px) {
-            .team-members {
-                flex-direction: column;
-                align-items: center;
-            }
-
             .service {
                 padding: 15px;
             }
@@ -285,18 +223,6 @@
             .cta a {
                 font-size: 1rem;
                 padding: 8px 16px;
-            }
-
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header p {
-                font-size: 1.1rem;
-            }
-
-            .services {
-                grid-template-columns: 1fr; /* Una sola columna en móviles */
             }
         }
     </style>
@@ -306,11 +232,11 @@
         <img src="imprintuc.jpg" alt="Logo de Imprintuc, empresa de impresión 3D">
         <h1>Imprintuc</h1>
         <p>Transformamos tus ideas en realidad con impresión 3D</p>
-        <a href="#contacto" class="cta">Solicita tu consulta gratuita</a>
     </header>
 
     <nav>
         <a href="#servicios">Servicios</a>
+        <a href="#tecnologia">Nuestra Tecnología</a>
         <a href="#contacto">Contacto</a>
         <a href="#nosotros">Nosotros</a>
     </nav>
@@ -323,74 +249,46 @@
                     <i class="fas fa-pencil-ruler"></i>
                     <h3>Diseño 3D Personalizado</h3>
                     <p>Creación de modelos 3D adaptados a tus necesidades y especificaciones.</p>
+                    <img src="path-to-your-image/diseño.jpg" alt="Ejemplo de diseño 3D" class="service-img">
                 </div>
                 <div class="service">
                     <i class="fas fa-print"></i>
                     <h3>Impresión 3D</h3>
-                    <p>Producción de piezas de alta calidad utilizando tecnología avanzada de impresión 3D.</p>
+                    <p>Producción de piezas de alta calidad utilizando tecnología avanzada de impresión 3D. Nos especializamos en impresión **FDM** (Modelado por Deposición Fundida), que es un proceso en el que se depositan capas de material termoplástico fundido para crear objetos tridimensionales con una precisión y detalle excepcionales.</p>
+                    <img src="path-to-your-image/impresion.jpg" alt="Ejemplo de impresión 3D" class="service-img">
                 </div>
                 <div class="service">
                     <i class="fas fa-tools"></i>
                     <h3>Asesoramiento Técnico</h3>
-                    <p>Te ayudamos a llevar a cabo tus proyectos con soluciones innovadoras y prácticas.</p>
+                    <p>Brindamos asistencia en la selección de materiales, optimización de diseño y procesos para garantizar el éxito de tu proyecto.</p>
+                    <img src="path-to-your-image/asesoria.jpg" alt="Ejemplo de asesoramiento técnico" class="service-img">
                 </div>
             </div>
         </section>
-
-        <div class="cta">
-            <a href="#contacto">Contáctanos</a>
-        </div>
     </div>
 
-    <div class="container" id="nosotros">
-        <h2>Nosotros</h2>
-        <p>¡Hola y bienvenidos! Somos Gabriel y Verónica, hermanos y emprendedores apasionados por la innovación. Todo comenzó con la compra de una impresora 3D para proyectos personales en casa, pero pronto nos dimos cuenta del enorme potencial que tenía. Así nació Imprintuc un emprendimiento que crece con cada idea y desafío que asumimos.</p>
-        <div class="team-members">
-            <div class="team-member">
-                <img src="gabriel.jpeg" alt="Foto de Gabriel, responsable técnico de Imprintuc">
-                <h3>Gabriel</h3>
-                <p>Con una pasión por la tecnología, Gabriel se encarga de la parte técnica y la gestión de proyectos.</p>
-            </div>
-            <div class="team-member">
-                <img src="veronica.jpg" alt="Foto de Verónica, responsable de diseño de Imprintuc">
-                <h3>Verónica</h3>
-                <p>Verónica es la responsable de la estrategia de marketing y de aportar ideas innovadoras, garantizando que cada proyecto que realizamos sea único y especial.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" id="contacto">
-        <h2>Contacto</h2>
-        <form>
-            <label for="name">Nombre</label>
-            <input type="text" id="name" placeholder="Nombre" required>
-            
-            <label for="email">Correo Electrónico</label>
-            <input type="email" id="email" placeholder="Correo Electrónico" required>
-            
-            <label for="message">Mensaje</label>
-            <textarea id="message" placeholder="Mensaje" rows="5" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
+    <div id="tecnologia">
+        <h2>Impresión 3D FDM</h2>
+        <p>La impresión por deposición fundida (FDM) es una tecnología de impresión 3D que utiliza un material termoplástico fundido para crear capas sucesivas de un objeto. Es ideal para piezas con detalles precisos y alta resistencia mecánica.</p>
+        <img src="path-to-your-image/tecnologia.jpg" alt="Imagen de proceso de FDM" class="technology-img">
     </div>
 
     <footer>
-        <p>&copy; 2025 Imprintuc. Todos los derechos reservados. <a href="#">Contáctanos</a></p>
+        <p>&copy; 2025 Imprintuc. Todos los derechos reservados.</p>
         <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100094727785238" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/imprintuc_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
 
     <script>
-        // Mostrar servicios con animación al hacer scroll
+        // Animación de los servicios con scroll
         window.addEventListener('scroll', () => {
             const services = document.querySelectorAll('.service');
             services.forEach(service => {
                 const serviceTop = service.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                if (serviceTop < windowHeight - 100) {
+                if (serviceTop < window.innerHeight - 50) {
                     service.classList.add('visible');
                 }
             });
@@ -398,3 +296,4 @@
     </script>
 </body>
 </html>
+
