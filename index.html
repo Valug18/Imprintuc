@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imprintuc - Servicios 3D</title>
+    <meta name="description" content="Imprintuc ofrece servicios personalizados de impresión 3D, diseño y asesoramiento técnico para tus proyectos.">
+    <meta name="keywords" content="impresión 3D, diseño 3D, impresión personalizada, asesoramiento técnico">
+    <title>Imprintuc - Servicios de Impresión 3D Personalizados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -88,7 +91,14 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .service.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .service:hover {
@@ -148,6 +158,7 @@
 
         footer .social-icons a:hover {
             color: #f39c12;
+            transform: rotate(10deg);
         }
 
         .cta {
@@ -168,7 +179,7 @@
 
         .cta a:hover {
             background: #002a5c;
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         form {
@@ -178,6 +189,13 @@
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             margin: 30px auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
 
         form input, form textarea, form button {
@@ -242,11 +260,27 @@
             color: #555;
             margin-top: 10px;
         }
+
+        @media (max-width: 768px) {
+            .team-members {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service {
+                padding: 15px;
+            }
+
+            .cta a {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="imprintuc.jpg" alt="Imprintuc Logo">
+        <img src="imprintuc.jpg" alt="Logo de Imprintuc, empresa de impresión 3D">
         <h1>Imprintuc</h1>
         <p>Transformamos tus ideas en realidad con impresión 3D</p>
     </header>
@@ -286,15 +320,15 @@
 
     <div class="container" id="nosotros">
         <h2>Nosotros</h2>
-        <p>Hola! nos presentamos: somos Gabriel y Verónica, somos hermanos y se nos ocurrio armar un emprendimiento juntos. Imprintuc surge de una compra de una impresora 3D para realizar algunas cosas en casa y fue evolucionando, hoy nos animamos a más y te invitamos a que nos acompañes.</p>
+        <p>Hola! nos presentamos: somos Gabriel y Verónica, somos hermanos y se nos ocurrió armar un emprendimiento juntos. Imprintuc surge de una compra de una impresora 3D para realizar algunas cosas en casa y fue evolucionando. Hoy nos animamos a más y te invitamos a que nos acompañes.</p>
         <div class="team-members">
             <div class="team-member">
-                <img src="gabriel.jpeg" alt="Gabriel">
+                <img src="gabriel.jpeg" alt="Foto de Gabriel, responsable técnico de Imprintuc">
                 <h3>Gabriel</h3>
                 <p>Con una pasión por la tecnología, Gabriel se encarga de la parte técnica y la gestión de proyectos.</p>
             </div>
             <div class="team-member">
-                <img src="veronica.jpg" alt="Verónica">
+                <img src="veronica.jpg" alt="Foto de Verónica, responsable de diseño de Imprintuc">
                 <h3>Verónica</h3>
                 <p>Verónica lidera el diseño y desarrollo de ideas innovadoras, asegurando que cada proyecto sea único.</p>
             </div>
@@ -304,9 +338,15 @@
     <div class="container" id="contacto">
         <h2>Contacto</h2>
         <form>
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Correo Electrónico" required>
-            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" placeholder="Nombre" required>
+            
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" placeholder="Correo Electrónico" required>
+            
+            <label for="message">Mensaje</label>
+            <textarea id="message" placeholder="Mensaje" rows="5" required></textarea>
+            
             <button type="submit">Enviar</button>
         </form>
     </div>
@@ -318,6 +358,19 @@
             <a href="https://www.instagram.com/imprintuc_/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
+
+    <script>
+        // Mostrar servicios con animación al hacer scroll
+        window.addEventListener('scroll', () => {
+            const services = document.querySelectorAll('.service');
+            services.forEach(service => {
+                const serviceTop = service.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (serviceTop < windowHeight - 100) {
+                    service.classList.add('visible');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
