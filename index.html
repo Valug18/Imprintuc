@@ -21,7 +21,7 @@
             color: #333;
             line-height: 1.6;
             margin: 0;
-            scroll-behavior: smooth; /* Habilitar desplazamiento suave */
+            scroll-behavior: smooth;
         }
 
         header {
@@ -83,11 +83,11 @@
             text-align: center;
         }
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            justify-items: center;
+        .service-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
         }
 
         .service {
@@ -95,16 +95,9 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s ease;
-            opacity: 0;
-            transform: translateY(20px);
-            width: 100%;
-            max-width: 350px;
-        }
-
-        .service.visible {
-            opacity: 1;
-            transform: translateY(0);
+            width: 45%;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .service:hover {
@@ -124,23 +117,20 @@
             margin-bottom: 15px;
         }
 
-        .service i {
-            font-size: 2rem;
-            color: #f39c12;
-            margin-bottom: 10px;
-        }
-
-        .service-img {
+        .service img {
             width: 100%;
             height: auto;
-            margin-top: 15px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
-        .service-img:hover {
+        .service img:hover {
             transform: scale(1.05);
+        }
+
+        .service.reverse {
+            flex-direction: row-reverse;
         }
 
         #tecnologia {
@@ -206,7 +196,7 @@
         footer .social-icons a {
             color: white;
             margin: 0 15px;
-            font-size: 1.5rem;
+            font-size: 2rem;
             transition: color 0.3s;
         }
 
@@ -217,12 +207,12 @@
 
         @media (max-width: 768px) {
             .service {
-                padding: 15px;
+                width: 100%;
             }
 
-            .cta a {
-                font-size: 1rem;
-                padding: 8px 16px;
+            footer .social-icons a {
+                font-size: 2.5rem;
+                margin: 0 10px;
             }
         }
 
@@ -240,60 +230,33 @@
         }
 
         .contact p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: #555;
             margin-bottom: 30px;
         }
 
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
+        .contact .social-icons {
+            margin-top: 30px;
         }
 
-        .contact input,
-        .contact textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .contact button {
-            background-color: #00509e;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .contact button:hover {
-            background-color: #003366;
-        }
-
-        #nosotros {
-            background-color: #f4f4f9;
-            padding: 50px 20px;
-            margin-top: 60px;
-            text-align: center;
-        }
-
-        #nosotros h2 {
-            font-size: 2.5rem;
+        .contact .social-icons a {
             color: #00509e;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin: 0 25px;
+            transition: transform 0.3s, color 0.3s;
         }
 
-        #nosotros p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 30px;
+        .contact .social-icons a:hover {
+            transform: scale(1.2);
+            color: #f39c12;
         }
 
+        .contact .email {
+            font-size: 1.5rem;
+            color: #00509e;
+            font-weight: bold;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -313,24 +276,21 @@
     <div class="container" id="servicios">
         <section>
             <h2>Nuestros Servicios</h2>
-            <div class="services">
+            <div class="service-container">
                 <div class="service">
-                    <i class="fas fa-pencil-ruler"></i>
                     <h3>Diseño 3D Personalizado</h3>
                     <p>Creación de modelos 3D adaptados a tus necesidades y especificaciones.</p>
-                    <img src="Ejemplo de diseño 3D.png" alt="Ejemplo de diseño 3D" class="service-img">
+                    <img src="path-to-your-image/diseño.jpg" alt="Ejemplo de diseño 3D">
                 </div>
-                <div class="service">
-                    <i class="fas fa-print"></i>
+                <div class="service reverse">
                     <h3>Impresión 3D</h3>
                     <p>Producción de piezas de alta calidad utilizando tecnología avanzada de impresión 3D. Nos especializamos en impresión **FDM** (Modelado por Deposición Fundida), que es un proceso en el que se depositan capas de material termoplástico fundido para crear objetos tridimensionales con una precisión y detalle excepcionales.</p>
-                    <img src="impresion.jpg" alt="Ejemplo de impresión 3D" class="service-img">
+                    <img src="path-to-your-image/impresion.jpg" alt="Ejemplo de impresión 3D">
                 </div>
                 <div class="service">
-                    <i class="fas fa-tools"></i>
                     <h3>Asesoramiento Técnico</h3>
                     <p>Brindamos asistencia en la selección de materiales, optimización de diseño y procesos para garantizar el éxito de tu proyecto.</p>
-                    <img src="asesoramiento.jpg" alt="Ejemplo de asesoramiento técnico" class="service-img">
+                    <img src="path-to-your-image/asesoria.jpg" alt="Ejemplo de asesoramiento técnico">
                 </div>
             </div>
         </section>
@@ -339,23 +299,29 @@
     <div id="tecnologia">
         <h2>Impresión 3D FDM</h2>
         <p>La impresión por deposición fundida (FDM) es una tecnología de impresión 3D que utiliza un material termoplástico fundido para crear capas sucesivas de un objeto. Es ideal para piezas con detalles precisos y alta resistencia mecánica.</p>
-        <img src="tecnologia.jpg" alt="Imagen de proceso de FDM" class="technology-img">
+        <img src="path-to-your-image/tecnologia.jpg" alt="Imagen de proceso de FDM" class="technology-img">
     </div>
 
     <div id="nosotros">
         <h2>Sobre Nosotros</h2>
-        <p>En Imprintuc somos apasionados por la tecnología y la creación. Nos especializamos en ofrecer soluciones personalizadas de impresión 3D y asesoría para convertir ideas en productos funcionales. Nuestro compromiso con la calidad y la innovación nos convierte en tu mejor socio para proyectos de impresión 3D.</p>
+        <div class="about-content">
+            <div class="about-text">
+                <p>En Imprintuc somos apasionados por la tecnología y la creación. Nos especializamos en ofrecer soluciones personalizadas de impresión 3D y asesoría para convertir ideas en productos funcionales. Nuestro compromiso con la calidad y la innovación nos convierte en tu mejor socio para proyectos de impresión 3D.</p>
+            </div>
+            <div class="about-image">
+                <img src="path-to-your-image/nosotros.jpg" alt="Equipo de Imprintuc trabajando">
+            </div>
+        </div>
     </div>
 
     <div id="contacto" class="contact">
         <h2>Contacto</h2>
-        <p>¿Tienes alguna consulta? ¡Estamos para ayudarte!</p>
-        <form>
-            <input type="text" placeholder="Tu nombre" required>
-            <input type="email" placeholder="Tu correo electrónico" required>
-            <textarea placeholder="Escribe tu mensaje" rows="4" required></textarea>
-            <button type="submit">Enviar mensaje</button>
-        </form>
+        <p>¡Conéctate con nosotros a través de nuestras redes sociales o por correo electrónico!</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="email"><a href="mailto:imprintuc@gmail.com">imprintuc@gmail.com</a></p>
     </div>
 
     <footer>
@@ -366,19 +332,5 @@
             <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
-
-    <script>
-        // Animación de los servicios con scroll
-        window.addEventListener('scroll', () => {
-            const services = document.querySelectorAll('.service');
-            services.forEach(service => {
-                const serviceTop = service.getBoundingClientRect().top;
-                if (serviceTop < window.innerHeight - 50) {
-                    service.classList.add('visible');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
-
