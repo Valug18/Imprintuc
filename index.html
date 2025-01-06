@@ -31,17 +31,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         header img {
             width: 150px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        header h1 {
-            font-size: 1.5rem;
-            font-weight: bold;
         }
 
         header p {
@@ -75,6 +76,7 @@
             width: 90%;
             margin: 0 auto;
             padding: 50px 0;
+            padding-top: 120px; /* Para no tapar el contenido debajo del header fijo */
         }
 
         h2 {
@@ -96,7 +98,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-            width: 45%;
+            width: 30%; /* Se establece el 30% del ancho para mantener las imágenes alineadas */
             margin-bottom: 30px;
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
@@ -109,10 +111,10 @@
         }
 
         .service img {
-            width: 45%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 120px; /* Tamaño uniforme de la imagen */
+            height: 120px;
+            border-radius: 50%; /* Imagen circular */
+            border: 5px solid #00509e; /* Borde azul */
             margin-right: 20px;
             transition: transform 0.3s ease;
         }
@@ -122,7 +124,7 @@
         }
 
         .service .content {
-            width: 55%;
+            width: 65%;
         }
 
         .service h3 {
@@ -137,8 +139,33 @@
             margin-bottom: 15px;
         }
 
-        #tecnologia {
-            display: none;
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #00509e;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member h3 {
+            color: #00509e;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            color: #555;
+            font-size: 1rem;
         }
 
         footer {
@@ -249,14 +276,14 @@
                     <img src="impresion.jpg" alt="Ejemplo de impresión 3D">
                     <div class="content">
                         <h3>Impresión 3D</h3>
-                        <p>Producción de piezas de alta calidad utilizando tecnología avanzada de impresión 3D. Nos especializamos en impresión **FDM** (Modelado por Deposición Fundida), que es un proceso en el que se depositan capas de material termoplástico fundido para crear objetos tridimensionales con una precisión y detalle excepcionales.</p>
+                        <p>Producción de piezas de alta calidad utilizando tecnología avanzada de impresión 3D.</p>
                     </div>
                 </div>
                 <div class="service">
                     <img src="asesoramiento.jpg" alt="Ejemplo de asesoramiento técnico">
                     <div class="content">
                         <h3>Asesoramiento Técnico</h3>
-                        <p>Brindamos asistencia en la selección de materiales, optimización de diseño y procesos para garantizar el éxito de tu proyecto.</p>
+                        <p>Brindamos asistencia en la selección de materiales, optimización de diseño y procesos.</p>
                     </div>
                 </div>
             </div>
@@ -265,17 +292,17 @@
 
     <div class="container" id="nosotros">
         <h2>Nosotros</h2>
-        <p>¡Hola y bienvenidos! Somos Gabriel y Verónica, hermanos y emprendedores apasionados por la innovación. Todo comenzó con la compra de una impresora 3D para proyectos personales en casa, pero pronto nos dimos cuenta del enorme potencial que tenía. Así nació Imprintuc: un emprendimiento que crece con cada idea y desafío que asumimos.</p>
+        <p>¡Hola y bienvenidos! Somos Gabriel y Verónica, hermanos y emprendedores apasionados por la innovación. Todo comenzó con la compra de una impresora 3D para proyectos personales en casa, pero pronto nos dimos cuenta del enorme potencial que tenía. Así nació Imprintuc.</p>
         <div class="team-members">
             <div class="team-member">
                 <img src="gabriel.jpeg" alt="Foto de Gabriel, responsable técnico de Imprintuc">
                 <h3>Gabriel</h3>
-                <p>Con una pasión por la tecnología, Gabriel se encarga de la parte técnica y la gestión de proyectos.</p>
+                <p>Encargado de la parte técnica y la gestión de proyectos.</p>
             </div>
             <div class="team-member">
                 <img src="veronica.jpg" alt="Foto de Verónica, responsable de diseño de Imprintuc">
                 <h3>Verónica</h3>
-                <p>Verónica es la responsable de la estrategia de marketing y de aportar ideas innovadoras, garantizando que cada proyecto que realizamos sea único y especial.</p>
+                <p>Responsable de la estrategia de marketing y la innovación en proyectos.</p>
             </div>
         </div>
     </div>
