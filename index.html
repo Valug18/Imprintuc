@@ -27,27 +27,25 @@
         header {
             background: linear-gradient(135deg, #002a5c, #00509e);
             color: white;
-            padding: 20px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 40px 20px;
+            text-align: left;
             position: fixed;
-            width: 100%;
             top: 0;
-            left: 0;
+            width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         header img {
-            width: 150px;
-            border-radius: 10px;
+            width: 120px;
+            border-radius: 50%;
+            margin: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         header p {
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-left: 150px;
             color: #f39c12;
         }
 
@@ -55,8 +53,9 @@
             background: #00509e;
             padding: 15px 0;
             position: sticky;
-            top: 0;
+            top: 80px;
             text-align: center;
+            z-index: 100;
         }
 
         nav a {
@@ -76,7 +75,6 @@
             width: 90%;
             margin: 0 auto;
             padding: 50px 0;
-            padding-top: 120px; /* Para no tapar el contenido debajo del header fijo */
         }
 
         h2 {
@@ -98,11 +96,12 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-            width: 30%; /* Se establece el 30% del ancho para mantener las imágenes alineadas */
+            width: 45%;
             margin-bottom: 30px;
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
-            flex-direction: row;
+            align-items: center;
+            border: 1px solid #e0e0e0; /* Añadido borde suave */
         }
 
         .service:hover {
@@ -111,99 +110,47 @@
         }
 
         .service img {
-            width: 120px; /* Tamaño uniforme de la imagen */
-            height: 120px;
-            border-radius: 50%; /* Imagen circular */
-            border: 5px solid #00509e; /* Borde azul */
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, opacity 0.3s ease;
             margin-right: 20px;
-            transition: transform 0.3s ease;
         }
 
         .service img:hover {
             transform: scale(1.05);
+            opacity: 0.8;
         }
 
-        .service .content {
-            width: 65%;
-        }
-
-        .service h3 {
-            margin-bottom: 15px;
-            color: #00509e;
-            font-size: 1.5rem;
-        }
-
-        .service p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .team-members {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 50px;
-        }
-
-        .team-member {
-            text-align: center;
+        .service.reverse {
+            flex-direction: row-reverse;
         }
 
         .team-member img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 5px solid #00509e;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            border: 4px solid #00509e;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .team-member h3 {
+            font-size: 1.2rem;
             color: #00509e;
             margin-bottom: 10px;
         }
 
         .team-member p {
-            color: #555;
             font-size: 1rem;
-        }
-
-        footer {
-            background: #002a5c;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #f39c12;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        footer .social-icons {
-            margin-top: 20px;
-        }
-
-        footer .social-icons a {
-            color: white;
-            margin: 0 15px;
-            font-size: 2rem;
-            transition: color 0.3s;
-        }
-
-        footer .social-icons a:hover {
-            color: #f39c12;
-            transform: rotate(10deg);
+            color: #555;
         }
 
         .contact {
@@ -246,12 +193,66 @@
             color: #00509e;
             font-weight: bold;
             margin-top: 20px;
+            padding: 10px;
+            background-color: #00509e;
+            border-radius: 5px;
+            color: white;
+        }
+
+        footer {
+            background: #002a5c;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        footer .social-icons {
+            margin-top: 20px;
+        }
+
+        footer .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #f39c12;
+            transform: rotate(10deg);
+        }
+
+        @media (max-width: 768px) {
+            .service {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            footer .social-icons a {
+                font-size: 2.5rem;
+                margin: 0 10px;
+            }
+
+            .contact .social-icons a {
+                font-size: 2rem;
+                margin: 0 10px;
+            }
+
+            .team-member img {
+                width: 120px;
+                height: 120px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="imprintuc.jpg" alt="Logo de Imprintuc, empresa de impresión 3D">
+        <img src="imprintuc.jpg" alt="Logo de Imprintuc">
         <p><strong>Transformamos tus ideas en realidad con impresión 3D</strong></p>
     </header>
 
@@ -262,48 +263,44 @@
     </nav>
 
     <div class="container" id="servicios">
-        <section>
-            <h2>Nuestros Servicios</h2>
-            <div class="service-container">
-                <div class="service">
-                    <img src="Ejemplo de diseño 3D.png" alt="Ejemplo de diseño 3D">
-                    <div class="content">
-                        <h3>Diseño 3D Personalizado</h3>
-                        <p>Creación de modelos 3D adaptados a tus necesidades y especificaciones.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <img src="impresion.jpg" alt="Ejemplo de impresión 3D">
-                    <div class="content">
-                        <h3>Impresión 3D</h3>
-                        <p>Producción de piezas de alta calidad utilizando tecnología avanzada de impresión 3D.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <img src="asesoramiento.jpg" alt="Ejemplo de asesoramiento técnico">
-                    <div class="content">
-                        <h3>Asesoramiento Técnico</h3>
-                        <p>Brindamos asistencia en la selección de materiales, optimización de diseño y procesos.</p>
-                    </div>
+        <h2>Nuestros Servicios</h2>
+        <div class="service-container">
+            <div class="service">
+                <img src="Ejemplo de diseño 3D.png" alt="Ejemplo de diseño 3D">
+                <div>
+                    <h3>Diseño 3D Personalizado</h3>
+                    <p>Creación de modelos 3D adaptados a tus necesidades y especificaciones.</p>
                 </div>
             </div>
-        </section>
+            <div class="service reverse">
+                <img src="impresion.jpg" alt="Ejemplo de impresión 3D">
+                <div>
+                    <h3>Impresión 3D</h3>
+                    <p>Producción de piezas de alta calidad utilizando tecnología avanzada de impresión 3D. Nos especializamos en impresión FDM.</p>
+                </div>
+            </div>
+            <div class="service">
+                <img src="asesoramiento.jpg" alt="Ejemplo de asesoramiento técnico">
+                <div>
+                    <h3>Asesoramiento Técnico</h3>
+                    <p>Brindamos asistencia en la selección de materiales y optimización de diseño.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container" id="nosotros">
         <h2>Nosotros</h2>
-        <p>¡Hola y bienvenidos! Somos Gabriel y Verónica, hermanos y emprendedores apasionados por la innovación. Todo comenzó con la compra de una impresora 3D para proyectos personales en casa, pero pronto nos dimos cuenta del enorme potencial que tenía. Así nació Imprintuc.</p>
-        <div class="team-members">
-            <div class="team-member">
-                <img src="gabriel.jpeg" alt="Foto de Gabriel, responsable técnico de Imprintuc">
-                <h3>Gabriel</h3>
-                <p>Encargado de la parte técnica y la gestión de proyectos.</p>
-            </div>
-            <div class="team-member">
-                <img src="veronica.jpg" alt="Foto de Verónica, responsable de diseño de Imprintuc">
-                <h3>Verónica</h3>
-                <p>Responsable de la estrategia de marketing y la innovación en proyectos.</p>
-            </div>
+        <p>¡Hola y bienvenidos! Somos Gabriel y Verónica, hermanos y emprendedores apasionados por la innovación. Todo comenzó con la compra de una impresora 3D para proyectos personales en casa.</p>
+        <div class="team-member">
+            <img src="gabriel.jpeg" alt="Foto de Gabriel">
+            <h3>Gabriel</h3>
+            <p>Encargado de la parte técnica y gestión de proyectos.</p>
+        </div>
+        <div class="team-member">
+            <img src="veronica.jpg" alt="Foto de Verónica">
+            <h3>Verónica</h3>
+            <p>Responsable de marketing y asegurando la calidad de cada proyecto.</p>
         </div>
     </div>
 
@@ -313,7 +310,10 @@
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:imprintuc@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:imprintuc@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="email">
+            <a href="mailto:imprintuc@gmail.com">imprintuc@gmail.com</a>
         </div>
     </div>
 
@@ -326,4 +326,3 @@
     </footer>
 </body>
 </html>
-
