@@ -19,13 +19,14 @@
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f9;
             color: #333;
-            line-height: 1.8;
+            line-height: 1.6;
+            font-size: 1.1rem; /* Aumenta la fuente de todo el texto */
         }
 
         header {
             background: linear-gradient(135deg, #002a5c, #00509e);
             color: white;
-            padding: 50px 0;
+            padding: 40px 0;
             text-align: center;
             position: relative;
             z-index: 1000;
@@ -39,16 +40,16 @@
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: bold;
             margin-top: 10px;
-            color: #f39c12;
+            color: #f39c12; /* Color naranja */
         }
 
         nav {
             background: #00509e;
             padding: 15px 0;
-            position: fixed;
+            position: fixed; /* Cambio a fixed para que quede fijo al hacer scroll */
             top: 0;
             width: 100%;
             z-index: 1000;
@@ -58,8 +59,8 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.5rem;
+            margin: 0 15px;
+            font-size: 1.2rem;
             font-weight: bold;
             transition: color 0.3s;
         }
@@ -70,14 +71,14 @@
 
         .container {
             width: 90%;
-            margin: 0 auto;
-            padding: 80px 0 50px;  /* Increased padding for more space */
+            margin: 80px auto 0 auto; /* Ajuste el margen superior para no tapar el contenido */
+            padding: 50px 0;
         }
 
         h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #002a5c;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             text-align: center;
         }
 
@@ -86,12 +87,12 @@
             justify-content: space-between;
             gap: 30px;
             flex-wrap: wrap;
-            margin-bottom: 60px;  /* Increased space between sections */
+            margin-bottom: 50px;
         }
 
         .service {
             background: white;
-            padding: 25px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
             width: 30%;
@@ -117,8 +118,8 @@
             display: flex;
             justify-content: center;
             gap: 50px;
-            margin-top: 50px;  /* Increased space between sections */
-            margin-bottom: 50px;
+            margin-top: 40px;
+            margin-bottom: 40px;
         }
 
         .team-member {
@@ -133,7 +134,7 @@
             margin-bottom: 20px;
             border: 4px solid #00509e;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            object-fit: cover;
+            object-fit: cover; /* Asegura que la imagen se ajuste correctamente sin distorsionarse */
             transition: transform 0.3s ease;
         }
 
@@ -142,26 +143,26 @@
         }
 
         .team-member h3 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #00509e;
             margin-bottom: 10px;
         }
 
         .team-member p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #555;
         }
 
         .contact {
             background-color: #e9f1f8;
-            padding: 50px 20px;
+            padding: 40px 20px;
             text-align: center;
         }
 
         .contact h2 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: #00509e;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .contact .social-icons a {
@@ -181,11 +182,11 @@
             color: white;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 60px;
+            margin-top: 40px;
         }
 
         footer p {
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         footer .social-icons a {
@@ -222,7 +223,7 @@
             }
 
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
         }
     </style>
@@ -268,7 +269,9 @@
 
     <div class="container" id="nosotros">
         <h2>Nosotros</h2>
-        <p>¡Hola y bienvenidos! Somos <strong>Imprintuc</strong>, un emprendimiento tucumano fundado por Gabriel y Verónica. Nuestra pasión por la tecnología 3D nos ha llevado a crear este proyecto que hoy nos permite ofrecer soluciones innovadoras para tus ideas y necesidades.</p>
+        <p>¡Hola y bienvenidos! Somos Gabriel y Verónica, hermanos y emprendedores apasionados por la innovación. Todo comenzó con la compra de una impresora 3D para proyectos personales en casa, pero pronto nos dimos cuenta del enorme potencial que tenía. Así nació Imprintuc un emprendimiento tucumano que crece con cada idea y desafío que asumimos.
+
+Hoy, nos hemos lanzado a compartir nuestra pasión por la tecnología 3D y te invitamos a ser parte de este viaje. Juntos, podemos llevar tus proyectos a un nuevo nivel. ¡Acompáñanos y descubramos juntos lo que podemos crear!.</p>
         <div class="team-member-container">
             <div class="team-member">
                 <img src="gabriel.jpeg" alt="Foto de Gabriel">
@@ -298,4 +301,3 @@
     </footer>
 </body>
 </html>
-
