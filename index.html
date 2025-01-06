@@ -89,6 +89,7 @@
             justify-content: space-between;
             margin-bottom: 50px;
             flex-wrap: wrap;
+            gap: 30px; /* Mejora la consistencia del espacio entre los elementos */
         }
 
         .service {
@@ -97,11 +98,10 @@
             border-radius: 10px;
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
             width: 45%;
-            margin-bottom: 30px;
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             align-items: center;
-            border: 1px solid #e0e0e0; /* Añadido borde suave */
+            border: 1px solid #e0e0e0;
         }
 
         .service:hover {
@@ -247,6 +247,11 @@
                 width: 120px;
                 height: 120px;
             }
+
+            header p {
+                font-size: 1.5rem; /* Aumenté el tamaño de fuente en móviles */
+                margin-left: 140px; /* Ajusté el margen para mayor consistencia */
+            }
         }
     </style>
 </head>
@@ -266,21 +271,21 @@
         <h2>Nuestros Servicios</h2>
         <div class="service-container">
             <div class="service">
-                <img src="Ejemplo de diseño 3D.png" alt="Ejemplo de diseño 3D">
+                <img src="Ejemplo de diseño 3D.png" alt="Diseño 3D personalizado">
                 <div>
                     <h3>Diseño 3D Personalizado</h3>
                     <p>Creación de modelos 3D adaptados a tus necesidades y especificaciones.</p>
                 </div>
             </div>
             <div class="service reverse">
-                <img src="impresion.jpg" alt="Ejemplo de impresión 3D">
+                <img src="impresion.jpg" alt="Impresión 3D de alta calidad">
                 <div>
                     <h3>Impresión 3D</h3>
                     <p>Producción de piezas de alta calidad utilizando tecnología avanzada de impresión 3D. Nos especializamos en impresión FDM.</p>
                 </div>
             </div>
             <div class="service">
-                <img src="asesoramiento.jpg" alt="Ejemplo de asesoramiento técnico">
+                <img src="asesoramiento.jpg" alt="Asesoramiento técnico en impresión 3D">
                 <div>
                     <h3>Asesoramiento Técnico</h3>
                     <p>Brindamos asistencia en la selección de materiales y optimización de diseño.</p>
